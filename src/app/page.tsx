@@ -1,18 +1,24 @@
 "use client";
-import { ThemeProvider, createTheme } from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
-import React, { useState } from "react";
 
-const darkTheme = createTheme({
+import React, { useState } from "react";
+import CssBaseline from "@mui/material/CssBaseline";
+import { Box, ThemeProvider, createTheme } from "@mui/material";
+import Header from "@/components/Header";
+
+const defaultTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
+  },
+  typography: {
+    fontFamily: "Poppins, sans-serif",
   },
 });
 
 export default function Home() {
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={defaultTheme}>
+        <Header />
         <CssBaseline />
       </ThemeProvider>
     </>
