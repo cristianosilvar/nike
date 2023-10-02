@@ -1,11 +1,13 @@
 import React from "react";
 import ButtonDefault, { ButtonDefaultInterface } from "..";
 
-interface ButtonText extends ButtonDefaultInterface {}
+interface ButtonText extends ButtonDefaultInterface {
+  children: React.ReactNode;
+}
 
 const ButtonText = ({ children, ...rest }: ButtonDefaultInterface) => {
   return (
-    <ButtonDefault color="inherit" {...rest}>
+    <ButtonDefault variant="text" color="inherit" {...rest}>
       {children}
     </ButtonDefault>
   );

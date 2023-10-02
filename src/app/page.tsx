@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Box, ThemeProvider, createTheme } from "@mui/material";
 import Header from "@/components/Header";
+import Main from "@/components/Main";
 
 const defaultTheme = createTheme({
   palette: {
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
-        <Header />
+        <Main></Main>
         <CssBaseline />
       </ThemeProvider>
     </>
